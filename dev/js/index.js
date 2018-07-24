@@ -12,4 +12,9 @@ import App from './components/App'
 // A reducer is a function that says what data we're supposed to store in our store;
 const store = createStore(allReducers);
 
-ReactDOM.render (<h1>Hey there!</h1>, document.getElementById('root'));
+// we wrap provider around the App and pass the store thus making the store available/accessible to our entire application/ component through the provider;
+ReactDOM.render (
+  <Provider store={store}>
+    <App />
+  </Provider>
+,document.getElementById('root'));
