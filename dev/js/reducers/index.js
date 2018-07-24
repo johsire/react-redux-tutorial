@@ -1,4 +1,4 @@
-import { combinedReducers } from 'redux';
+import { combineReducers } from 'redux';
 import UserReducer from './reducer-users';
 
 
@@ -7,7 +7,7 @@ import UserReducer from './reducer-users';
 
 // we save our obj in a main obj const allReducers which we pass in the store as a single/ reduced obj.
 
-const allReducers = combinedReducers({
+const allReducers = combineReducers ({
   users: UserReducer
 });
 
