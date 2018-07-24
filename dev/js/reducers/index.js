@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import UserReducer from './reducer-users';
+import ActiveUserReducer from './reducer-active-user';
 
 
 // this is how we trun the big users obj into one obj/ reduce it so we can pass it thro the store as a single obj vs the multiple objects it was before;
@@ -8,7 +9,8 @@ import UserReducer from './reducer-users';
 // we save our obj in a main obj const allReducers which we pass in the store as a single/ reduced obj.
 
 const allReducers = combineReducers ({
-  users: UserReducer
+  users: UserReducer,
+  activeUser: ActiveUserReducer
 });
 
 export default allReducers;
